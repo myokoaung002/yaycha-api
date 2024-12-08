@@ -55,7 +55,7 @@ router.delete("/posts/:id", async (req, res) => {
   res.sendStatus(204);
 });
 
-router.delete("comments/:id", async (req, res) => {
+router.delete("/comments/:id", async (req, res) => {
   const { id } = req.params;
 
   await prisma.comment.delete({
